@@ -50,17 +50,17 @@
           llama-cpp-python = pkgs.python3Packages.llama-cpp-python;
           default = packages.llama-cpp-python;
         };
-        app = {
-          llama-cpp-main = {
-            type = "app";
-            program = "${packages.llama-cpp}/bin/llama-cpp-main";
-          };
-          llama-cpp-server = {
-            type = "app";
-            program = "${packages.llama-cpp}/bin/llama-cpp-server";
-          };
-          default = app.llama-cpp-main;
-        };
+        # app = {
+        #   llama-cpp-main = {
+        #     type = "app";
+        #     program = "${packages.llama-cpp}/bin/llama-cpp-main";
+        #   };
+        #   llama-cpp-server = {
+        #     type = "app";
+        #     program = "${packages.llama-cpp}/bin/llama-cpp-server";
+        #   };
+        #   default = app.llama-cpp-main;
+        # };
         devShells.default = pkgs.mkShell {
           packages = [
             pkgs.llama-cpp
