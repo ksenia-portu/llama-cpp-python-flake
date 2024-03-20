@@ -36,12 +36,7 @@
                   "-DLLAMA_F16C=off"
                 ] ++ oa.cmakeFlags or [];
                 enableParallelBuilding = true;
-              })).override {
-                cudaSupport = false;
-                rocmSupport = true;
-                openclSupport = false;
-                openblasSupport = false;
-              };
+              }));
             })
           ];
         };
